@@ -6,4 +6,5 @@ Siga as instruções do [slide](https://dvcirilo-ifrn.github.io/pweb/slides/aula
 
 ## Equipe
 - Almira Beatriz
-- Pessoa 2
+- Emanuelly Maria
+
