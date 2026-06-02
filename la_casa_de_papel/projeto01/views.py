@@ -1,5 +1,14 @@
 from django.shortcuts import render
 
+def inicio(request):
+    return render(request, "time/inicio.html", {"site": site})
+
+def elenco_view(request):
+    return render(request, "time/elenco.html", {"site": site, "elenco": elenco})
+
+def sobre(request):
+    return render(request, "time/sobre.html", {"site": site})
+
 site = {
     "título": "La Casa de Papel",
     "descricao": "Site oficial do elenco da série La Casa de Papel",
