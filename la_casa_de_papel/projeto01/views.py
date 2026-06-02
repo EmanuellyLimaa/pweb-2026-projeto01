@@ -30,12 +30,3 @@ elenco = [
     "nome": "Raquel", "idade": 35, "posicao": "Inspetora", "nascimento": "Espanha", "foto": "raquel.webp",
     "nome": "Angel", "idade": 33, "posicao": "Negociador", "nascimento": "Espanha", "foto": "angel.webp",
 ]
-
-def inicio(request):
-    return render(request, "time/inicio.html", {"site": site})
-
-def elenco_view(request):
-    return render(request, "time/elenco.html", {"site": site, "elenco": elenco})
-
-def sobre(request):
-    return render(request, "time/sobre.html", {"site": site})
