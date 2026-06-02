@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block conteudo%}
+    <h1>Sobre a serie </h1>
+    <p> {{dados.descricao_site }}</p>
+
+    <h3> Autores: </h3>
+    <ul>
+        {% for autor in dados.autores %}
+        <li> {{ autor }}</li>
+            {% endfor %}
+    </ul>
+

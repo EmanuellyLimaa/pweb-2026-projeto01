@@ -4,9 +4,22 @@
     <title>Pagina inicial</title>
 </head>
 <body>
-    <h1> Bem-vindo a pagina inicial</h1>
-    <p> Acesse ao elenco clicando no link abaixo:</p>
 
-    <a href="/usuarios">Visualizar elenco</a>
+    <nav> 
+        <a href="{% url 'inicio'%}"> Inicio </a>
+        <a href="{% url 'elenco'%}"> Elenco </a>
+        <a href="{% url 'sobre'%}"> Sobre </a>
+    </nav>
+    <hr>
+
+    <main>
+        {% block conteudo}
+        {% endblock %}
+    </main>
+
+    <hr>
+    <footer>
+        <p> &copy; 2026 - Todos os direitos reservados à equipe.</p>
+    </footer>
 </body>
 </html>

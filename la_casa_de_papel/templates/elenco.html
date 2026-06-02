@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block conteudo%}
+    <h1>Elenco </h1>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+        {% for ator in atores %}
+            <div style="border: 1px solid #ccc; padding: 10px; width: 200px;">
+                <h3>{{ ator.nome }}</h3>
+                <p><strong>Idade:</strong>{{ ator.idade}} anos</p>
+                <p><strong>Posiçao:</strong>{{ ator.posicao}}</p>
+                <p><strong>Nascimento:</strong>{{ ator.local_nascimento}}</p>
+            </div>
+            {% endfor %}
+            </div>
+    {% endblock %}
+
