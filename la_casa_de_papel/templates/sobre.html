@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sobre o site</title>
-</head>
-<body>
-    
-{% extends 'time/base.html' %}
 
-{% block conteudo %}
-<h2 class="mb-3">Sobre o Site</h2>
-<p>Este site foi criado para divulgar informações sobre a série <strong>La Casa de Papel</strong> e seu elenco principal.</p>
+{% extends 'index.html' %}
+{% block conteudo%}
+    <h1>Sobre a serie </h1>
+    <p> {{dados.descricao_site }}</p>
 
-<h3>Autores:</h3>
-<ul class="list-group list-group-flush">
-    {% for autor in site_info.autores %}
-    <li class="list-group-item bg-dark text-light">{{ autor }}</li>
-    {% endfor %}
-</ul>
-{% endblock %}
+    <h3> Autores: </h3>
+    <ul>
+        {% for autor in dados.autores %}
+        <li> {{ autor }}</li>
+            {% endfor %}
+    </ul>
 
-</body>
-</html>
