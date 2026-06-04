@@ -13,9 +13,11 @@
         <a href="{% url 'sobre'%}"> Sobre </a>
     </nav>
     <hr>
-
     <main>
-        {% block conteudo}
+    <img src="{%static 'img/elenco.webp' %}" alt="Elenco La Casa de Papel" width="800">
+    <p>{{ descricao_site}} </p>
+
+        {% block conteudo %}
         {% endblock %}
     </main>
 

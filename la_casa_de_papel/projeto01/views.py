@@ -45,13 +45,14 @@ elenco = [
      "idade": 40, 
      "posicao": "Operações", 
      "nascimento": "Rússia", 
-     "foto": "moscú.webp"},
+     "foto": "moscu.webp"},
 
-    {"nome": "Professor", 
-     "idade": 45, 
-     "posicao": "Líder", 
-     "nascimento": "Espanha", 
-     "foto": "professor.webp"},
+
+    {"nome": "Mónica Gaztambide",
+    "idade": 32,
+    "posicao": "Integrante da Equipe",
+    "nascimento": "Espanha",
+    "foto": "monica.webp"},
 
     {"nome": "Helsinki", 
      "idade": 38, 
