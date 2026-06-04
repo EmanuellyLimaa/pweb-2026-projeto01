@@ -1,33 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <title>Pagina inicial</title>
+    <meta charset="UTF-8">
+    <title>{{ site.titulo }}</title>
+
+    <link rel="stylesheet" href="{% static 'projeto01/style.css' %}">
 </head>
 
 <body>
 
     <nav>
-        <a href="{% url 'inicio'%}"> Inicio </a>
-        <a href="{% url 'elenco'%}"> Elenco </a>
-        <a href="{% url 'sobre'%}"> Sobre </a>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'elenco' %}">Elenco</a>
+        <a href="{% url 'sobre' %}">Sobre</a>
     </nav>
+
     <hr>
+
     <main>
-    <img src="{%static 'img/elenco.webp' %}" alt="Elenco La Casa de Papel" width="800">
-    <p>{{ descricao_site}} </p>
+
+        <img src="{% static 'projeto01/img/elenco.webp' %}" 
+             alt="Elenco La Casa de Papel" width="800">
+
+        <p>{{ descricao_site }}</p>
 
         {% block conteudo %}
         {% endblock %}
+
     </main>
 
     <hr>
+
     <footer>
-        <p> &copy; 2026 - Todos os direitos reservados à equipe.</p>
+        <p>&copy; 2026 - Todos os direitos reservados à equipe.</p>
     </footer>
 
-    <head>
-        <title></title>
-    </head>
-
+</body>
 </html>

@@ -1,15 +1,21 @@
 {% extends 'index.html' %}
+{% load static %}
 {% block conteudo%}
-<h1>Elenco </h1>
+
+<h1> Elenco </h1>
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
-{% for ator in atores %}
-<div style="border: 1px solid #ccc; padding: 10px; width: 200px;">
-    <h3>{{ ator.nome }}</h3>
-    <p><strong> Idade: </strong>{{ ator.idade}} anos</p>
-    <p><strong> Posiçao: </strong>{{ ator.posicao}}</p>
-    <p><strong> Nascimento: </strong>{{ ator.local_nascimento}}</p>
-</div>
+    {% for ator in atores %}
+    <div style="border: 1px solid #ccc; padding: 10px; width: 200px;">
+
+        <img src="{% static 'projeto01/img/' %}{{ ator.foto }}" alt="{{ ator.nome }}" width="180">
+        <h3>{{ ator.nome }}</h3>
+        <p><strong> Idade: </strong>{{ ator.idade}} anos</p>
+
+        <p><strong> Posiçao: </strong>{{ ator.posicao}}</p>
+
+        <p><strong> Nascimento: </strong>{{ ator.local_nascimento}}</p>
+    </div>
 {% endfor %}
 </div>
 {% endblock %}

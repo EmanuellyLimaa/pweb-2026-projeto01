@@ -1,13 +1,21 @@
-
 {% extends 'index.html' %}
-{% block conteudo%}
-    <h1>Sobre a serie </h1>
-    <p> {{dados.descricao_site }}</p>
+{% block conteudo %}
 
-    <h3> Autores: </h3>
-    <ul>
-        {% for autor in dados.autores %}
-        <li> {{ autor }}</li>
-            {% endfor %}
-    </ul>
+<h1>Sobre o Site</h1>
 
+<p>
+    Este site foi desenvolvido para apresentar os principais personagens da série
+    La Casa de Papel, mostrando informações sobre o elenco e a história da série.
+</p>
+
+<h3>Autoras</h3>
+
+<ul>
+    {% for autora in site.autoras %}
+        <li>{{ autora }}</li>
+    {% endfor %}
+</ul>
+
+<p><strong> Ano: </strong> {{ site.ano }}</p>
+
+{% endblock %}
