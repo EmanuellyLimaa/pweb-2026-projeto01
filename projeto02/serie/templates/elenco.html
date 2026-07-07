@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<h2>Elenco</h2>
+
+<div class="cards">
+
+{% for personagem in personagens %}
+
+<div class="card">
+
+    <img src="{{ personagem.foto.url }}" width="220">
+
+    <h3>{{ personagem.nome }}</h3>
+
+    <p><strong>Ator:</strong> {{ personagem.ator }}</p>
+
+    <p><strong>Idade:</strong> {{ personagem.idade }}</p>
+
+    <p><strong>Papel:</strong> {{ personagem.papel }}</p>
+
+    <p><strong>Nascimento:</strong> {{ personagem.nascimento }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
