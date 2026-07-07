@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from .models import Personagem, Site
 
-# Create your views here.
+def inicio(request):
+    site = Site.objects.first()
+    return render(request, 'inicio.html', {
+        'site': site
+    })
